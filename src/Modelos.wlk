@@ -48,6 +48,7 @@ class Bordadas inherits Lisas {
 	var cantColores = 1
 
 	override method costoChica() = super() + self.costoBordado()
+	// TODO ¿Qué pasa con el costo de las remeras grandes?
 
 	method costoBordado() = if (cantColores >= 3) 10 * cantColores else 20
 	override method descuento() = 2
@@ -57,12 +58,13 @@ class Sublimadas inherits Lisas {
 
 	const property alto
 	const property ancho
-	var property superficieSubl = alto * ancho
+	var property superficieSubl = alto * ancho // TODO Debería ser un método, esto no funciona.
 	var derechoAutor = 0
 
 	override method costoChica() = super() + self.costoSublimado()
+	// TODO ¿Qué pasa con el costo de las remeras grandes?
 
 	method costoSublimado() = 0.50 * superficieSubl + derechoAutor// Este costo es de 50 centavos por centímetro cuadrado de superficie del sublimado. 
-	override method descuento() = if (derechoAutor > 0) 20 else 10
+	override method descuento() = if (derechoAutor > 0) 20 else 10 // TODO No es lo que dice el enunciado.
 }
 

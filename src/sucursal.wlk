@@ -10,7 +10,7 @@ class Sucursal{
 	
 	method hayDescuento(cantidad) = return cantidadMinima >= cantidad 
 	
-	method facturar(num) =  return facturacion += num 
+	method facturar(num) =  return facturacion += num  // TODO ¿Cuándo se enviaría este mensaje?
 	
 }
 
